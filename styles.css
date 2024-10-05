@@ -1,0 +1,383 @@
+:root {
+  /* variables */
+  --cg-black: rgb(30, 32, 32);
+  --cg-blue: rgb(36, 94, 255);
+  --cg-grey: rgb(243, 243, 243);
+  --cg-white: rgb(255, 255, 255);
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Copperplate, Fantasy;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,60,94,1) 100%);
+  color: var(--cg-white);
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Background*/
+div.scroll-container {
+  background-color:rgba(0,0,0, 0.4);
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  margin: 20px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  display:inline-block;
+}
+
+.bg-text{
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border: 10px solid #f1f1f1;
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+
+/* Navbar */
+.navbar h1{
+  color: white;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Ensure space between logo and nav list */
+  align-items: center;
+  background-color: rgba(0,0,0, 0.4);
+  color: var(--cg-white);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 24px;
+  font-family: Copperplate, Fantasy; /* Match your overall theme */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--cg-white);
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: var(--cg-blue);
+}
+
+/* Nav List */
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Adjust spacing between nav items */
+  justify-content: space-evenly; /* Distribute items evenly */
+  flex: 1; /* Allow nav-list to take up the remaining space */
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0;
+  display: flex;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  padding: 10px 15px;
+  background-color: lightblue;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: rgb(34, 193, 195);
+  background-color: white;
+}
+
+.nav-list a:active {
+  color: white;
+}
+
+
+/* Main Content */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.page-title {
+  font-size: 40px;
+}
+
+/* Portfolio Grid */
+.project {
+  display: flex;
+  max-width: 100%;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+
+.item-link {
+  width: 70%;
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.project-details {
+  background-color: var(--cg-white);
+  width: 30%;
+  height: 300px;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-details a {
+  color: var(--cg-black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-details a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+footer {
+  background-color: rgba(0,0,0, 0.4);
+  color: var(--cg-white);
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+input[type="submit"] {
+  background-color: lightblue;
+  color: black;
+  padding: 12px 25px;
+  border: 20px white;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Copperplate, Fantasy;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="submit"]:hover {
+  color: rgb(34, 193, 195);
+  background-color: white;
+}
+
+form {
+  max-width: 1000px; /* Increased width for a larger form */
+  margin: 0 auto;
+  padding: 40px; /* Increased padding for more space */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1); /* Light background with some transparency */
+}
+
+
+/* Headshot Styling */
+.headshot {
+  margin-top: 20 px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.headshot img {
+  margin: 30px;
+  padding: 10px;
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  background-color:  rgba(0,0,0, 0.4);
+}
+
+.portfolio {
+  margin-top: 20 px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.portfolio img {
+  margin: 30px;
+  padding: 20px;
+  width: 1000px;
+  height: auto;
+  background-color:  rgba(0,0,0, 0.4);
+}
+
+/* Resume Styling */
+.resume {
+  margin-top: 20 px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 40px; /* Space between sections */
+  background-color:  rgba(0,0,0, 0.4);
+  width: 100%;
+}
+
+.section-title {
+  font-size: 40px; /* Larger font for section titles */
+  color: lightblue;
+  border-bottom: 2px solid var(--cg-blue); /* Underline */
+  padding-bottom: 5px; /* Space below title */
+}
+
+.entry {
+  margin-top: 10px; /* Space above entries */
+}
+
+.entry-title {
+  font-size: 30px; /* Slightly smaller for entry titles */
+  color: var(--cg-white);
+  margin: 5px 0; /* Space around titles */
+  
+}
+
+.entry-info {
+  font-size: 30px; /* Info font size */
+  color: var(--cg-grey); /* Grey for subtlety */
+}
+
+.entry-description {
+  font-size: 30px; /* Smaller description text */
+  color: var(--cg-white);
+  margin-top: 5px; /* Space above descriptions */
+}
+
+/* Skill List */
+.skill-list,
+.course-list,
+.interests-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.skill-list div,
+.course-list li,
+.interests-list li {
+  margin: 10px; /* Space between list items */
+}
+
+/* General Styling for Lists */
+.skill-list div {
+  font-weight: bold; /* Bold headers for programming languages/tools */
+  color: var(--cg-blue);
+}
+
+.skill-list li,
+.course-list li,
+.interests-list li {
+  color: var(--cg-white); /* White text for list items */
+  padding-left: 20px; /* Indentation */
+}
+
+/* Activities and Awards */
+.activities .entry,
+.awards .entry {
+  margin-bottom: 10px; /* Space below entries */
+}
+
+.page-title {
+  font-size: 36px; 
+  color: White; 
+  text-align: center; 
+  margin: 20px 0; 
+  font-weight: bold; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  padding: 10px;
+  position: relative;
+}
+
+/* Style for the download link */
+.page-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  padding: 10px 15px;
+  background-color: lightblue;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;}
+
+.page-title a:hover {
+  color: rgb(34, 193, 195);
+  background-color: white;
+}
+
+.download-link {
+  display: flex;
+  justify-content: center;
+  text-align: center; /* Center align the download link */
+  margin-top: 10px; /* Space above the download link */
+}
+
